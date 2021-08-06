@@ -20,4 +20,6 @@ class PlaceViewModel : ViewModel(){
     fun searchPlace(query: String){
         searchLiveData.value = query
     }
+
+    //fun savaPlace(place: Place) = Repository
 }

@@ -64,8 +64,8 @@ import java.net.Inet4Address
 ]
 }
  */
-data class PlaceResponse(val status: String, val place: List<Place>)
+data class PlaceResponse(val status: String, val places: List<Place>)
 
-class Place(val name: String, val location: Location, @SerializedName("formatted_address") val address: String)
+data class Place(val name: String, val location: Location, @SerializedName("formatted_address") val address: String)
 
 data class Location(val lng: String, val lat: String)

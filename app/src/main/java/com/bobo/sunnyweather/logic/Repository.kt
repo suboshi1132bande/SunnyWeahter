@@ -14,7 +14,7 @@ object Repository {
         val result = try {
             val paceResponse = SunnyWheaterNetwork.searchPlaces(query)
             if (paceResponse.status  == "ok"){
-                val place = paceResponse.place
+                val place = paceResponse.places
                 Result.success(place)
             }else{
                 Result.failure(RuntimeException("response status is ${paceResponse.status}"))
